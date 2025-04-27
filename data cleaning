@@ -1,0 +1,101 @@
+Year,Facility.Id,Facility.Name,APR.DRG.Code,APR.Severity.of.Illness.Code,APR.DRG.Description,APR.Severity.of.Illness.Description,APR.Medical.Surgical.Code,APR.Medical.Surgical.Description,Discharges,Mean.Charge,Median.Charge,Mean.Cost,Median.Cost
+2016,4,Albany Memorial Hospital,194,1,Heart Failure,Minor,M,Medical,2,8375.41,8375.41,3585.05,3585.05
+2016,4,Albany Memorial Hospital,194,2,Heart Failure,Moderate,M,Medical,40,14029.82,12176.95,6182.67,5253.15
+2016,4,Albany Memorial Hospital,194,3,Heart Failure,Major,M,Medical,70,23921.77,20229.81,11149.49,9068.1
+2016,4,Albany Memorial Hospital,194,4,Heart Failure,Extreme,M,Medical,12,51260.45,35210.82,26081.7,15230.62
+2016,4,Albany Memorial Hospital,196,4,Cardiac Arrest,Extreme,M,Medical,1,25357.84,25357.84,7791.75,7791.75
+2016,4,Albany Memorial Hospital,226,1,Anal Procedures,Minor,P,Surgical,1,19519.24,19519.24,7533.43,7533.43
+2016,4,Albany Memorial Hospital,251,3,Abdominal Pain,Major,M,Medical,1,9918.48,9918.48,3734.21,3734.21
+2016,4,Albany Memorial Hospital,302,1,Knee Joint Replacement,Minor,P,Surgical,1,32689.13,32689.13,15429.94,15429.94
+2016,4,Albany Memorial Hospital,302,2,Knee Joint Replacement,Moderate,P,Surgical,1,25748.61,25748.61,12709.99,12709.99
+2016,325,Alice Hyde Medical Center,240,3,Digestive Malignancy,Major,M,Medical,1,29896.31,29896.31,10302.89,10302.89
+2016,325,Alice Hyde Medical Center,240,4,Digestive Malignancy,Extreme,M,Medical,1,31390.22,31390.22,6758.02,6758.02
+2016,325,Alice Hyde Medical Center,241,1,Peptic Ulcer & Gastritis,Minor,M,Medical,2,6001.44,6001.44,2294.67,2294.67
+2016,325,Alice Hyde Medical Center,241,2,Peptic Ulcer & Gastritis,Moderate,M,Medical,5,12610.53,11677.45,4755.58,4910.33
+2016,325,Alice Hyde Medical Center,241,3,Peptic Ulcer & Gastritis,Major,M,Medical,1,19590.33,19590.33,7565.2,7565.2
+2016,325,Alice Hyde Medical Center,243,1,Other Esophageal Disorders,Minor,M,Medical,1,12684.41,12684.41,3293.43,3293.43
+2016,325,Alice Hyde Medical Center,243,2,Other Esophageal Disorders,Moderate,M,Medical,1,18620.08,18620.08,6940.36,6940.36
+2016,1,Albany Medical Center Hospital,196,4,Cardiac Arrest,Extreme,M,Medical,16,96602.15,90984.31,24503.87,17913.28
+2016,324,Adirondack Medical Center-Saranac Lake Site,4,3,Tracheostomy W MV 96+ Hours W Extensive Procedure Or Ecmo,Major,P,Surgical,1,161456.53,161456.53,158061.41,158061.41
+2016,324,Adirondack Medical Center-Saranac Lake Site,5,3,Tracheostomy W MV 96+ Hours W/O Extensive Procedure,Major,P,Surgical,1,178853.06,178853.06,160794.62,160794.62
+2016,324,Adirondack Medical Center-Saranac Lake Site,24,1,Extracranial Vascular Procedures,Minor,P,Surgical,12,15339.81,15400.58,9363.97,9451.71
+2016,324,Adirondack Medical Center-Saranac Lake Site,24,2,Extracranial Vascular Procedures,Moderate,P,Surgical,9,19468.62,17476.12,11495.73,10141.73
+2016,324,Adirondack Medical Center-Saranac Lake Site,24,3,Extracranial Vascular Procedures,Major,P,Surgical,4,38055.12,42715,25982.11,28718.38
+2016,324,Adirondack Medical Center-Saranac Lake Site,41,3,Nervous System Malignancy,Major,M,Medical,1,15927.7,15927.7,9546.76,9546.76
+2016,324,Adirondack Medical Center-Saranac Lake Site,42,1,Degenerative Nervous System Disorders Exc Mult Sclerosis,Minor,M,Medical,3,21677.81,28530.96,19965.74,27414.54
+2016,324,Adirondack Medical Center-Saranac Lake Site,42,2,Degenerative Nervous System Disorders Exc Mult Sclerosis,Moderate,M,Medical,3,14433.87,16184.98,9167.06,9463.43
+2016,324,Adirondack Medical Center-Saranac Lake Site,44,2,Intracranial Hemorrhage,Moderate,M,Medical,1,9633.18,9633.18,6466.78,6466.78
+2016,324,Adirondack Medical Center-Saranac Lake Site,45,1,CVA & Precerebral Occlusion W Infarct,Minor,M,Medical,2,16309.84,16309.84,7344.72,7344.72
+2016,324,Adirondack Medical Center-Saranac Lake Site,45,2,CVA & Precerebral Occlusion W Infarct,Moderate,M,Medical,18,22061.77,21149.79,14824.8,13603.79
+2016,324,Adirondack Medical Center-Saranac Lake Site,45,3,CVA & Precerebral Occlusion W Infarct,Major,M,Medical,3,16307.73,15306.28,12198.54,12240.36
+2016,324,Adirondack Medical Center-Saranac Lake Site,46,2,Nonspecific CVA & Precerebral Occlusion W/O Infarct,Moderate,M,Medical,1,15494.24,15494.24,9263.01,9263.01
+2016,324,Adirondack Medical Center-Saranac Lake Site,47,2,Transient Ischemia,Moderate,M,Medical,1,23113.46,23113.46,12067.35,12067.35
+2016,324,Adirondack Medical Center-Saranac Lake Site,48,1,"Peripheral, Cranial & Autonomic Nerve Disorders",Minor,M,Medical,1,12110.68,12110.68,5943.87,5943.87
+2016,324,Adirondack Medical Center-Saranac Lake Site,48,2,"Peripheral, Cranial & Autonomic Nerve Disorders",Moderate,M,Medical,1,10727.94,10727.94,8306.79,8306.79
+2016,324,Adirondack Medical Center-Saranac Lake Site,52,3,Nontraumatic Stupor & Coma,Major,M,Medical,9,20217.93,19997.38,15690.66,15241.75
+2016,324,Adirondack Medical Center-Saranac Lake Site,53,1,Seizure,Minor,M,Medical,1,13352.76,13352.76,7726.99,7726.99
+2016,324,Adirondack Medical Center-Saranac Lake Site,53,2,Seizure,Moderate,M,Medical,2,15570.68,15570.68,10760.77,10760.77
+2016,324,Adirondack Medical Center-Saranac Lake Site,53,3,Seizure,Major,M,Medical,2,32013.16,32013.16,36230.14,36230.14
+2016,324,Adirondack Medical Center-Saranac Lake Site,54,3,Migraine & Other Headaches,Major,M,Medical,1,24921.64,24921.64,18702.49,18702.49
+2016,324,Adirondack Medical Center-Saranac Lake Site,58,1,Other Disorders Of Nervous System,Minor,M,Medical,1,7592.06,7592.06,7428.74,7428.74
+2016,324,Adirondack Medical Center-Saranac Lake Site,58,3,Other Disorders Of Nervous System,Major,M,Medical,1,15185,15185,7187.81,7187.81
+2016,324,Adirondack Medical Center-Saranac Lake Site,98,1,"Other Ear, Nose, Mouth & Throat Procedures",Minor,P,Surgical,1,22951.66,22951.66,15747.62,15747.62
+2016,324,Adirondack Medical Center-Saranac Lake Site,113,1,Infections Of Upper Respiratory Tract,Minor,M,Medical,2,7506.84,7506.84,6802.29,6802.29
+2016,324,Adirondack Medical Center-Saranac Lake Site,113,2,Infections Of Upper Respiratory Tract,Moderate,M,Medical,3,11911.82,11514.26,8819.96,8498.98
+2016,324,Adirondack Medical Center-Saranac Lake Site,113,3,Infections Of Upper Respiratory Tract,Major,M,Medical,2,19808.04,19808.04,12994.15,12994.15
+2016,324,Adirondack Medical Center-Saranac Lake Site,115,1,"Other Ear, Nose, Mouth,Throat & Cranial/Facial Diagnoses",Minor,M,Medical,1,12205.26,12205.26,10233.94,10233.94
+2016,324,Adirondack Medical Center-Saranac Lake Site,115,2,"Other Ear, Nose, Mouth,Throat & Cranial/Facial Diagnoses",Moderate,M,Medical,2,15344.25,15344.25,11062.25,11062.25
+2016,4,Albany Memorial Hospital,53,1,Seizure,Minor,M,Medical,1,7676.79,7676.79,3745.02,3745.02
+2016,324,Adirondack Medical Center-Saranac Lake Site,120,1,Major Respiratory & Chest Procedures,Minor,P,Surgical,5,30508.78,30961.02,23644.25,25484.7
+2016,324,Adirondack Medical Center-Saranac Lake Site,120,2,Major Respiratory & Chest Procedures,Moderate,P,Surgical,9,41095.68,44472.94,33158.91,34539.68
+2016,324,Adirondack Medical Center-Saranac Lake Site,120,3,Major Respiratory & Chest Procedures,Major,P,Surgical,1,69586.98,69586.98,57993.13,57993.13
+2016,324,Adirondack Medical Center-Saranac Lake Site,120,4,Major Respiratory & Chest Procedures,Extreme,P,Surgical,1,126418.9,126418.9,86153.84,86153.84
+2016,324,Adirondack Medical Center-Saranac Lake Site,121,1,Other Respiratory & Chest Procedures,Minor,P,Surgical,1,23845.9,23845.9,27671.19,27671.19
+2016,324,Adirondack Medical Center-Saranac Lake Site,121,2,Other Respiratory & Chest Procedures,Moderate,P,Surgical,6,20481.11,22258.29,14750.09,15182.91
+2016,324,Adirondack Medical Center-Saranac Lake Site,121,3,Other Respiratory & Chest Procedures,Major,P,Surgical,3,35948.04,35824.06,29613.94,24481.69
+2016,324,Adirondack Medical Center-Saranac Lake Site,130,3,Respiratory System Diagnosis W Ventilator Support 96+ Hours,Major,M,Medical,1,72531.28,72531.28,75053.48,75053.48
+2016,324,Adirondack Medical Center-Saranac Lake Site,130,4,Respiratory System Diagnosis W Ventilator Support 96+ Hours,Extreme,M,Medical,1,108381.74,108381.74,94916.39,94916.39
+2016,324,Adirondack Medical Center-Saranac Lake Site,133,2,Pulmonary Edema & Respiratory Failure,Moderate,M,Medical,5,18681.26,18256.72,13298.73,13929.33
+2016,324,Adirondack Medical Center-Saranac Lake Site,133,3,Pulmonary Edema & Respiratory Failure,Major,M,Medical,17,26168.48,21388.3,19584.12,15308.12
+2016,324,Adirondack Medical Center-Saranac Lake Site,133,4,Pulmonary Edema & Respiratory Failure,Extreme,M,Medical,5,71304.68,41358.72,60175.46,33312.31
+2016,324,Adirondack Medical Center-Saranac Lake Site,134,1,Pulmonary Embolism,Minor,M,Medical,2,16529.09,16529.09,12516.29,12516.29
+2016,324,Adirondack Medical Center-Saranac Lake Site,134,2,Pulmonary Embolism,Moderate,M,Medical,2,20575.62,20575.62,14344.12,14344.12
+2016,324,Adirondack Medical Center-Saranac Lake Site,134,3,Pulmonary Embolism,Major,M,Medical,2,17821.35,17821.35,10565.21,10565.21
+2016,324,Adirondack Medical Center-Saranac Lake Site,134,4,Pulmonary Embolism,Extreme,M,Medical,1,104814.34,104814.34,74049.14,74049.14
+2016,324,Adirondack Medical Center-Saranac Lake Site,135,1,Major Chest & Respiratory Trauma,Minor,M,Medical,1,22038.42,22038.42,18630.62,18630.62
+2016,324,Adirondack Medical Center-Saranac Lake Site,135,2,Major Chest & Respiratory Trauma,Moderate,M,Medical,1,11435.28,11435.28,4740.36,4740.36
+2016,324,Adirondack Medical Center-Saranac Lake Site,135,3,Major Chest & Respiratory Trauma,Major,M,Medical,1,13572.22,13572.22,13298.08,13298.08
+2016,324,Adirondack Medical Center-Saranac Lake Site,136,2,Respiratory Malignancy,Moderate,M,Medical,1,33086.22,33086.22,24472.8,24472.8
+2016,324,Adirondack Medical Center-Saranac Lake Site,136,3,Respiratory Malignancy,Major,M,Medical,3,23875.93,21930.52,14868.93,12106.31
+2016,324,Adirondack Medical Center-Saranac Lake Site,137,2,Major Respiratory Infections & Inflammations,Moderate,M,Medical,4,39210.51,22315.44,26450.77,13727.14
+2016,324,Adirondack Medical Center-Saranac Lake Site,137,3,Major Respiratory Infections & Inflammations,Major,M,Medical,7,41079.64,24364.42,36026.62,21268.2
+2016,324,Adirondack Medical Center-Saranac Lake Site,137,4,Major Respiratory Infections & Inflammations,Extreme,M,Medical,4,25270.32,26748.34,19338.32,21477.17
+2016,324,Adirondack Medical Center-Saranac Lake Site,138,1,Bronchiolitis & Rsv Pneumonia,Minor,M,Medical,1,6219.28,6219.28,6702.94,6702.94
+2016,324,Adirondack Medical Center-Saranac Lake Site,138,2,Bronchiolitis & Rsv Pneumonia,Moderate,M,Medical,1,6524.68,6524.68,6791.93,6791.93
+2016,324,Adirondack Medical Center-Saranac Lake Site,139,1,Other Pneumonia,Minor,M,Medical,5,17718.13,14959.74,14782.93,11078.09
+2016,324,Adirondack Medical Center-Saranac Lake Site,139,2,Other Pneumonia,Moderate,M,Medical,18,18640.64,16986.45,14141.09,12594.21
+2016,324,Adirondack Medical Center-Saranac Lake Site,139,3,Other Pneumonia,Major,M,Medical,23,22765.83,20911.07,16415.63,13957.99
+2016,324,Adirondack Medical Center-Saranac Lake Site,139,4,Other Pneumonia,Extreme,M,Medical,2,26736.54,26736.54,19225.8,19225.8
+2016,324,Adirondack Medical Center-Saranac Lake Site,140,1,Chronic Obstructive Pulmonary Disease,Minor,M,Medical,1,10059.3,10059.3,6509.92,6509.92
+2016,324,Adirondack Medical Center-Saranac Lake Site,140,2,Chronic Obstructive Pulmonary Disease,Moderate,M,Medical,3,13126.42,12606.04,7910.41,9135.4
+2016,324,Adirondack Medical Center-Saranac Lake Site,140,3,Chronic Obstructive Pulmonary Disease,Major,M,Medical,8,18689.14,13323.38,12904.89,10480.76
+2016,324,Adirondack Medical Center-Saranac Lake Site,140,4,Chronic Obstructive Pulmonary Disease,Extreme,M,Medical,2,29333.79,29333.79,19272.13,19272.13
+2016,324,Adirondack Medical Center-Saranac Lake Site,141,2,Asthma,Moderate,M,Medical,1,17404.44,17404.44,14352.92,14352.92
+2016,324,Adirondack Medical Center-Saranac Lake Site,142,3,Interstitial & Alveolar Lung Diseases,Major,M,Medical,1,23494.54,23494.54,18744.46,18744.46
+2016,324,Adirondack Medical Center-Saranac Lake Site,143,1,"Other Respiratory Diagnoses Except Signs, Symptoms & Minor Diagnoses",Minor,M,Medical,1,16286.18,16286.18,11194.68,11194.68
+2016,324,Adirondack Medical Center-Saranac Lake Site,143,2,"Other Respiratory Diagnoses Except Signs, Symptoms & Minor Diagnoses",Moderate,M,Medical,5,16014.77,16862.66,11996.24,10832.53
+2016,324,Adirondack Medical Center-Saranac Lake Site,143,3,"Other Respiratory Diagnoses Except Signs, Symptoms & Minor Diagnoses",Major,M,Medical,3,19613.65,21970.26,13333.85,13939.85
+2016,324,Adirondack Medical Center-Saranac Lake Site,169,2,Major Thoracic & Abdominal Vascular Procedures,Moderate,P,Surgical,2,81095.6,81095.6,49156.81,49156.81
+2016,324,Adirondack Medical Center-Saranac Lake Site,169,3,Major Thoracic & Abdominal Vascular Procedures,Major,P,Surgical,2,54341.21,54341.21,32919.59,32919.59
+2016,324,Adirondack Medical Center-Saranac Lake Site,169,4,Major Thoracic & Abdominal Vascular Procedures,Extreme,P,Surgical,2,84353.22,84353.22,47534.44,47534.44
+2016,324,Adirondack Medical Center-Saranac Lake Site,173,1,Other Vascular Procedures,Minor,P,Surgical,9,46368.31,38659.95,28649.11,32848.34
+2016,324,Adirondack Medical Center-Saranac Lake Site,173,2,Other Vascular Procedures,Moderate,P,Surgical,11,57382.09,50982.06,33103.25,27480.17
+2016,324,Adirondack Medical Center-Saranac Lake Site,173,3,Other Vascular Procedures,Major,P,Surgical,10,64312.7,56360.96,35731.61,34644.15
+2016,324,Adirondack Medical Center-Saranac Lake Site,173,4,Other Vascular Procedures,Extreme,P,Surgical,1,176557.7,176557.7,114607.21,114607.21
+2016,324,Adirondack Medical Center-Saranac Lake Site,180,1,Other Circulatory System Procedures,Minor,P,Surgical,1,20412.24,20412.24,21196.02,21196.02
+2016,324,Adirondack Medical Center-Saranac Lake Site,180,2,Other Circulatory System Procedures,Moderate,P,Surgical,1,16785.5,16785.5,17410.36,17410.36
+2016,324,Adirondack Medical Center-Saranac Lake Site,190,1,Acute Myocardial Infarction,Minor,M,Medical,8,8392.5,8216.36,6233.38,6785.65
+2016,324,Adirondack Medical Center-Saranac Lake Site,190,2,Acute Myocardial Infarction,Moderate,M,Medical,5,17662.88,16791.64,11945,9848.54
+2016,324,Adirondack Medical Center-Saranac Lake Site,190,3,Acute Myocardial Infarction,Major,M,Medical,5,22163.76,18063.26,14695.6,10889.01
+2016,324,Adirondack Medical Center-Saranac Lake Site,190,4,Acute Myocardial Infarction,Extreme,M,Medical,1,26479.17,26479.17,20129.98,20129.98
+2016,324,Adirondack Medical Center-Saranac Lake Site,193,3,Acute & Subacute Endocarditis,Major,M,Medical,1,57654.17,57654.17,42894.85,42894.85
