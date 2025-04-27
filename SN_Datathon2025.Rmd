@@ -1,0 +1,161 @@
+---
+title: "Data Analysis and Visualization of Drug Overdose in USA"
+author: "Stephanie Nguyen"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    theme: cerulean
+    df_print: paged
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+#install.packages("tidyverse")
+library(tidyverse)
+setwd("/Users/sn/Documents/Datathon_2025")
+health <- read.csv("Hospital_Inpatient_Discharges__SPARCS_De-Identified___Cost_Transparency__Beginning_2009_20250426.csv")
+```
+
+## Introduction
+
+The purpose of this analysis is to uncover trends and anomalies through data visualization and offer valuable insight. I'll be analyzing the records of hospital inpatient discharges across New York State — specifically focusing on the variable "Discharges", which represents the total number of discharges.
+
+The following questions I'll be answering:
+
+- What are the discharges by hospitals overall and for each year? What patterns do we notice?
+- Do overall discharge decrease with severity level?
+- What trends do we notice in discharges and mean charges/cost?
+
+**Data Cleaning**
+
+- Filter out 0 from APR.Severity.of.Illness.Code because the range is from 1-4(according to the website)
+- Converted variables I needed to numeric/factor format and removed commas
+- Removed rows with missing values using na.omit
+
+```{r q0p0, echo=TRUE, warning=FALSE}
+clean_health <- health %>%
+  filter(APR.Severity.of.Illness.Code != 0) %>%
+  mutate(APR.Severity.of.Illness.Code = as.factor(APR.Severity.of.Illness.Code)) %>%
+  mutate(Discharges = as.numeric(Discharges)) %>%
+  mutate(across(c(Mean.Charge, Median.Charge, Mean.Cost, Median.Cost), ~ as.numeric(gsub(",", "", .)))) %>%
+  na.omit()
+```
+
+## What are the discharges by hospitals overall and for each year? {.tabset}
+
+```{r q1p1, message=FALSE}
+All.Discharges <- clean_health %>%
+  group_by(Facility.Name) %>%
+  summarize(Overall.Discharge=sum(Discharges, na.rm=TRUE))
+  
+Yearly.Discharges <- clean_health %>%
+  group_by(Facility.Name, Year) %>%
+  summarize(Overall.Discharge = sum(Discharges, na.rm = TRUE))
+```
+
+### Table of Overall Discharge by Hospital
+
+*Display hospital and overall discharge(total number of discharges)*
+```{r q1p2}
+All.Discharges
+```
+
+### Table of Overall Discharge by Hospital each year
+
+*Display hospital, overall discharge(total number of discharges), and year(2009-2024)*
+```{r q1p3}
+Yearly.Discharges
+```
+
+## 
+
+###### Table of Top 5 Overall Discharge by Hospital
+
+The hospital with the most overall discharges is Mount Sinai Hospital, with 440,290 discharges. 
+```{r q1p4}
+top_5d <- All.Discharges %>%
+  arrange(desc(Overall.Discharge)) %>%
+  slice_head(n=5)
+
+top_5d
+```
+
+> As such, I plotted a line graph of overall discharges(y-axis) by hospitals over the years(x-axis).
+
+```{r q1p5, fig.width=10}
+plot_top_5d <- Yearly.Discharges %>%
+  filter(Facility.Name %in% c("Mount Sinai Hospital", "Montefiore Medical Center - Henry & Lucy Moses Div", "North Shore University Hospital", "New York Presbyterian Hospital - Columbia Presbyterian Center", "Strong Memorial Hospital"))
+
+ggplot(plot_top_5d, aes(x=Year, y=Overall.Discharge, color=Facility.Name)) +
+  geom_line() +
+  labs(x="Year", y="Overall Discharge(total number of discharges)", color="Hospital", title="Line Graph of Overall Discharges by Hospitals Over the Years")
+```
+
+- Montefiore Medical Center(red line): Relatively steady numbers until around 2017, after which it sharply declines, especially post-2018
+
+- Mount Sinai Hospital(yellow-green line): Starts with the highest discharges, peaks around 2012, and then shows a steady decline afterward.
+
+- New York Presbyterian Hospital(green line): A slight increase around 2016-2017 but follows a downward trend after
+
+- North Shore University Hospital(blue line): A consistent gradual decline without major spikes or drops
+
+- Strong Memorial Hospital(purple line): Seems the most stable overall — fewer extreme ups and downs compared to others
+
+A trend I noticed from the graph is the overall decrease in discharges over the years, especially around 2018-2020. Based on my knowledge, I suspect that COVID-19 may have been a factor in the drastic decrease around 2020. In addition, there seems to be a slight spike around 2015-2017 in all hospitals except Mount Sinai Hospital.
+ 
+## Do overall discharge decrease with severity level? 
+
+The goal of this question is to determine whether overall discharge has an impact on severity level. I predict that a higher severity level (where 1 represents minor severity of illness and 4 represents extreme severity of illness) will result in lower overall discharges due to the high amount of time needed for treatment. As such, I created a bar graph of overall discharges (y-axis) by severity level (x-axis).
+
+```{r p2q1}
+All.SI <- clean_health %>%
+  group_by(APR.Severity.of.Illness.Code) %>%
+  summarize(Overall.Discharges=sum(Discharges, na.rm = TRUE))
+
+ggplot(All.SI, aes(x=APR.Severity.of.Illness.Code, y=Overall.Discharges)) +
+  geom_bar(stat="identity", position = "dodge", fill="lightblue") +
+  labs(x="Severity Level", y="Overall Discharge(total number of discharges", title="Bar Graph of Overall Discharges by Severity Level") 
+```
+
+The graph shows that level 2 has the most overall discharges followed by level 1, demonstrating a slight left skew. In other words, there is an overall decrease in discharges as severity level increases after level 2, which mostly matches my prediction.
+
+## What trends do we notice in discharges and mean charges/cost? {.tabset}
+
+To investigate whether mean charge/cost has an effect on the number of discharges, I created the following scatter plots mapping discharges (x-axis) and mean charge/cost (y-axis) for Mount Sinai Hospital, which has a total of 11,087 discharges. Additionally, each point is color-coded by severity level.
+```{r q3p1}
+All.MSH21 <- clean_health %>%
+  filter(Facility.Name == "Mount Sinai Hospital")
+```
+
+### Scatter Plot of Mount Sinai Hospital Discharge vs Mean Charge
+
+*Display discharge, mean charge(USD), and severity level(where 1 represents minor severity of illness and 4 represents extreme severity of illness)*
+```{r q3p2}
+ggplot(All.MSH21, aes(x=Discharges, y=Mean.Charge, color=APR.Severity.of.Illness.Code)) +
+  geom_point() +
+  labs(x="Discharge", y="Mean Charge(USD)", color="Severity Level", title="Relationship of Discharge and Mean Charge")
+```
+
+### Scatter Plot of Mount Sinai Hospital Discharge vs Mean Cost
+
+*Display discharge, mean cost(USD), and severity level(where 1 represents minor severity of illness and 4 represents extreme severity of illness)*
+```{r q3p3}
+ggplot(All.MSH21, aes(x=Discharges, y=Mean.Cost, color=APR.Severity.of.Illness.Code)) +
+  geom_point() +
+  labs(x="Discharge", y="Mean Cost(USD)", color="Severity Level", title="Relationship of Discharge and Mean Cost")
+```
+
+##
+
+Both plots are visually similar to each other. One trend I notice is strong clustering near the origin, indicating low discharges and mean charge/cost. As discharges increase, the mean charge/cost somewhat decrease or remain relatively low, predominantly within levels 1-3. I also notice very high mean charges/cost at low discharges, mostly at level 4, which suggests that severity level 4 tends to have higher mean charge/cost compared to the others.
+
+## Conclusion
+In conclusion, the results generally match my predictions about inpatient discharges across New York State. The data visualization indicates that years and severity level may have an impact on overall discharges, specifically showing an overall decrease over the years and with severity level. Furthermore, mean charge/cost stays relatively low as discharges increase, and certain severity levels may have an impact on it. As such, these findings offer valuable insight on factors that influence inpatient discharges, which could aid the New York State Department of Health in decision-making regarding healthcare.
+
+Some questions I have for future analysis are:
+
+- Is there a relationship between overall discharge and illness type? 
+- Does illness type have an affect on mean charge/cost?
+
+
